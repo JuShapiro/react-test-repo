@@ -1,5 +1,5 @@
 import "modern-normalize";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 
 // const App = () => {
@@ -105,33 +105,95 @@ import "./App.css";
 
 // export default App;
 
-const App = () => {
-  const [values, setValues] = useState({
-    x: 0,
-    y: 0,
-  });
+// const App = () => {
+//   const [values, setValues] = useState({
+//     x: 0,
+//     y: 0,
+//   });
 
-  const updateX = () => {
-    setValues({
-      ...values,
-      x: values.x + 1,
-    });
-  };
-  const updateY = () => {
-    setValues({
-      ...values,
-      y: values.y + 1,
-    });
-  };
-  return (
-    <div>
-      <p>
-        x: {values.x} y: {values.y}
-      </p>
-      <button onClick={updateX}>UPDATE X</button>
-      <button onClick={updateY}>UPDATE Y</button>
-    </div>
-  );
-};
+//   const updateX = () => {
+//     setValues({
+//       ...values,
+//       x: values.x + 1,
+//     });
+//   };
+//   const updateY = () => {
+//     setValues({
+//       ...values,
+//       y: values.y + 1,
+//     });
+//   };
+//   return (
+//     <div>
+//       <p>
+//         x: {values.x} y: {values.y}
+//       </p>
+//       <button onClick={updateX}>UPDATE X</button>
+//       <button onClick={updateY}>UPDATE Y</button>
+//     </div>
+//   );
+// };
 
-export default App;
+// export default App;
+
+// const App = () => {
+//   const [clicks, setClicks] = useState(0);
+
+//   useEffect(() => {
+//     console.log("You can see me only once!");
+//   }, []);
+
+//   return (
+//     <button onClick={() => setClicks(clicks + 1)}>
+//       You clicked {clicks} times
+//     </button>
+//   );
+// };
+// export default App;
+
+// const App = () => {
+//   useEffect(() => {
+//     setInterval(() => {
+//       console.log(`interval - ${Date.now()}`);
+//     }, 2000);
+//   }, []);
+
+//   return <div>App</div>;
+// };
+
+// export default App;
+
+// const Modal = () => {
+//   useEffect(() => {
+//     const intervalId = setInterval(() => {
+//       console.log(`Interval - ${Date.now()}`);
+//     }, 2000);
+//     return clearInterval(intervalId);
+//   }, []);
+//   return <div>Modal</div>;
+// };
+// const App = () => {
+//   const [isOpen, setIsOpen] = useState(false);
+//   return (
+//     <div>
+//       <button onClick={() => setIsOpen(!isOpen)}>
+//         {isOpen ? "close" : "open"}
+//       </button>
+//       {isOpen && <Modal />}
+//     </div>
+//   );
+// };
+
+// export default App;
+
+// const App = () => {
+//   const [clicks, setClicks] = useState(0);
+//   useEffect(() => {
+//     console.log("Clicks updated: ", clicks);
+//   }, [clicks]);
+//   return (
+//     <button onClick={() => setClicks(clicks + 1)}>You clicked {clicks}</button>
+//   );
+// };
+
+// export default App;
